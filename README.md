@@ -22,7 +22,7 @@ For more information, please read our preprint paper ["Improving SpGEMM Performa
 
 ## Requirements
 ### Hardware
-This artifact has no specific hardware requirements and is expected to operate on any machine with at least 192~GB memory and the required software stack installed. However, for consistency, this artifact should be executed on the same platform intended for evaluating [clusterwise-spgemm](https://github.com/PaSSIONLab/clusterwise-spgemm).
+This artifact has no specific hardware requirements and is expected to operate on any machine with at least 192 GB memory and the required software stack installed. However, for consistency, this artifact should be executed on the same platform intended for evaluating [clusterwise-spgemm](https://github.com/PaSSIONLab/clusterwise-spgemm).
 
 ### Software
 As this artifact integrates a set of tools implementing ten reordering algorithms across different libraries, it requires several software dependencies, including:
@@ -30,7 +30,7 @@ As this artifact integrates a set of tools implementing ten reordering algorithm
 2. **GP** requires a C++11-compliant compiler (e.g., GCC or Clang), standard Unix development tools (e.g., GNU Make), and the [METIS 5.1.0](https://karypis.github.io/glaros/files/sw/metis/metis-5.1.0.tar.gz) graph partitioning library.
 3. **HP** requires a standard C compiler (e.g., GCC) and a precompiled PaToH static library (provided in the repository), with no additional external dependencies.
 4. **AMD, Gray, Degree & SlashBurn** are generated using [SparseBase-v0.3.1](https://github.com/sparcityeu/SparseBase). SparseBase requires CMake (version 3.12 or later) and a C++17-compliant compiler (such as GCC or Clang). To enable AMD support, [SuiteSparse](https://github.com/DrTimothyAldenDavis/SuiteSparse) must be installed beforehand. Further installation details are available in the official [SparseBase documentation](https://sparcityeu.github.io/SparseBase/).
-5. **Rabbit** is generated using the [official GitHub repository](https://github.com/araij/rabbit_order). It requires G++ (≥~v4.9.2) with C++11 support and depends on the Boost C++ Libraries (≥~v1.58.0) for core functionality. It also requires `libnuma` (≥~v2.0.9) for NUMA-aware memory management and `libtcmalloc_minimal` from Google Performance Tools (gperftools ≥~v2.1) for high-performance memory allocation.
+5. **Rabbit** is generated using the [official GitHub repository](https://github.com/araij/rabbit_order). It requires G++ (≥v4.9.2) with C++11 support and depends on the Boost C++ Libraries (≥v1.58.0) for core functionality. It also requires `libnuma` (≥v2.0.9) for NUMA-aware memory management and `libtcmalloc_minimal` from Google Performance Tools (gperftools ≥v2.1) for high-performance memory allocation.
 
 ## Replicating Our Benchmarks
 Get the reordering code:
